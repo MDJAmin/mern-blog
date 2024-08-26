@@ -1,8 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 * {
   text-decoration: none;
   margin: 0;
@@ -43,7 +38,7 @@ header nav {
 
 img {
   border-radius: 15px;
-  box-shadow:5px 4px 20px 2px #040303ab;
+  box-shadow: 5px 4px 20px 2px #040303ab;
   max-width: 100%;
   margin-bottom: 5%;
 }
@@ -68,7 +63,7 @@ div.entries {
   line-height: 30px;
 }
 
-hr{
+hr {
   margin: 10% 0;
 }
 
@@ -118,7 +113,6 @@ form.register h1 {
   font-weight: bold;
 }
 
-
 .spinner-container {
   display: flex;
   justify-content: center;
@@ -136,6 +130,10 @@ form.register h1 {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

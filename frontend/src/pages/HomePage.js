@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ClipLoader } from "react-spinners"; 
+import { ClipLoader } from "react-spinners";
 
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
@@ -52,10 +52,12 @@ export default function HomePage() {
               />
             )}
             <h2 className="title">{post.title}</h2>
-            <p className="date-time">{new Date(post.createdAt).toLocaleString()}</p>
+            <p className="date-time">
+              {new Date(post.createdAt).toLocaleString()}
+            </p>
             <p className="summary">{post.summary}</p>
-            <hr/>
-          </div>  
+            <hr />
+          </div>
         ))
       ) : (
         <p>No posts available</p>

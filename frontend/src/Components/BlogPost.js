@@ -2,10 +2,7 @@ export default function Posts({ title, summary, cover, createdAt }) {
   return (
     <section className="entries">
       <div className="image">
-        <img
-          src={cover}
-          alt={title}
-        />
+        <img src={cover} alt={title} />
       </div>
       <div>
         <h2>{title}</h2>

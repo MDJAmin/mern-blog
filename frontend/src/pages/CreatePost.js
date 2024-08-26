@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CreatePost() {
   const [title, setTitle] = useState("");
@@ -24,9 +24,8 @@ export default function CreatePost() {
       });
 
       if (response.ok) {
-        navigate('/'); 
+        navigate("/");
       } else {
-   
         console.error("Error creating post:", await response.text());
       }
     } catch (error) {
