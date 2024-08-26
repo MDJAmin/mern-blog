@@ -20,6 +20,7 @@ export default function NavBar() {
       <nav>
         {isLoggedIn ? (
           <>
+            <Link to="/create-post">Create Post</Link>
             <Link to="/" onClick={handleLogout}>
               Logout
             </Link>
