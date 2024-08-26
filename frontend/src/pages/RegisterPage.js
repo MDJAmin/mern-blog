@@ -35,12 +35,14 @@ export default function RegisterPage() {
       <input
         type="text"
         placeholder="username"
+        required
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
       <input
         type="password"
         placeholder="password"
+        required
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />

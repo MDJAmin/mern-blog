@@ -20,7 +20,6 @@ export default function LoginPage() {
         const data = await response.json();
         console.log("Login successful:", data);
         localStorage.setItem("token", data.token);
-        alert("Login successful");
         navigate("/");
       } else {
         const errorData = await response.json();
@@ -40,12 +39,14 @@ export default function LoginPage() {
       <input
         type="text"
         placeholder="username"
+        required
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
       <input
         type="password"
         placeholder="password"
+        required
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
