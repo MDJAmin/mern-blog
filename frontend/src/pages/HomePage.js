@@ -29,7 +29,7 @@ export default function HomePage() {
   if (loading) {
     return (
       <div className="spinner-container">
-        <ClipLoader color="#000000" loading={loading} size={150} />
+        <ClipLoader color="#ffffff" loading={loading} size={150} />
       </div>
     );
   }

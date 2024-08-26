@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import logo from "../android-chrome-192x192.png";
 export default function NavBar() {
   const navigate = useNavigate();
 
@@ -14,10 +14,15 @@ export default function NavBar() {
 
   return (
     <header>
-      <Link to="/" className="logo">
-        MyBlog
-      </Link>
-      <nav>
+      <div className="pages">
+        <Link to="/Introduction-Page">
+          <img id="logo" src={logo} alt="logo"></img>
+        </Link>
+        <Link to="/" className="logo">
+          MyBlog
+        </Link>
+      </div>
+      <div className="login-register">
         {isLoggedIn ? (
           <>
             <Link to="/create-post">Create Post</Link>
@@ -31,7 +36,7 @@ export default function NavBar() {
             <Link to="/Register">Register</Link>
           </>
         )}
-      </nav>
+      </div>
     </header>
   );
 }

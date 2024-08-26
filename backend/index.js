@@ -18,7 +18,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 app.use(express.json());
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
-app.use('/uploads', express.static(uploadsDir));  // Serve static files from the uploads directory
+app.use('/uploads', express.static(uploadsDir));  
 
 mongoose.connect(
   "mongodb+srv://amin:HkvLRfibimGnPYha@cluster0.sd44t.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
