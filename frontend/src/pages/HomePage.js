@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { ClipLoader } from "react-spinners"; 
 
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchPosts = async () => {
+    setLoading(true);
     try {
       const response = await fetch("http://localhost:4000/posts");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
       const data = await response.json();
       setPosts(data);
     } catch (error) {
-      console.error("Error fetching posts:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -17,11 +26,22 @@ export default function HomePage() {
     fetchPosts();
   }, []);
 
+  if (loading) {
+    return (
+      <div className="spinner-container">
+        <ClipLoader color="#000000" loading={loading} size={150} />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
   return (
     <div className="entries">
       {posts.length > 0 ? (
         posts.map((post) => (
-      
           <div key={post._id} className="post">
             {post.cover && (
               <img
