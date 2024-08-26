@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   async function register(e) {
     e.preventDefault();
     try {
@@ -13,10 +14,11 @@ export default function RegisterPage() {
         headers: { "Content-Type": "application/json" },
       });
 
-      if (response.ok) { 
-        const data = await response.json(); 
+      if (response.ok) {
+        const data = await response.json();
         console.log("Registration successful:", data);
         alert("Registration successful");
+        navigate("/login");
       } else {
         console.error("Registration failed with status:", response.status);
         alert("Registration failed!");
