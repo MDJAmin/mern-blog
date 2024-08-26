@@ -37,21 +37,33 @@ header nav {
 }
 
 img {
+  border-radius: 15px;
   max-width: 100%;
+  margin-bottom: 5%;
 }
 
-section.entries {
+div.entries {
   display: flex;
   flex-direction: column;
   margin-bottom: 25%;
 }
-
-.info {
+.title {
+  font-size: 2em;
+}
+.date-time {
   display: flex;
   gap: 10px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   opacity: 0.5;
   margin-bottom: 5%;
+}
+
+.summary {
+  line-height: 30px;
+}
+
+hr{
+  margin: 10% 0;
 }
 
 form.login,
