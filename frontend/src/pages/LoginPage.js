@@ -20,7 +20,7 @@ export default function LoginPage() {
         const data = await response.json();
         console.log("Login successful:", data);
         localStorage.setItem("token", data.token);
-        navigate("/");
+        navigate("/Introduction-Page");
       } else {
         const errorData = await response.json();
         console.error("Login failed:", errorData);

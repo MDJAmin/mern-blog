@@ -15,12 +15,16 @@ export default function NavBar() {
   return (
     <header>
       <div className="pages">
-        <Link to="/Introduction-Page">
+        <Link to="/">
           <img id="logo" src={logo} alt="logo"></img>
         </Link>
-        <Link to="/" className="logo">
-          MyBlog
-        </Link>
+        {isLoggedIn ? (
+          <Link to="/Introduction-Page" className="logo">
+            MyBlog
+          </Link>
+        ) : (
+          <></>
+        )}
       </div>
       <div className="login-register">
         {isLoggedIn ? (

@@ -14,8 +14,8 @@ function App() {
       <NavBar />
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Introduction-Page" element={<Introduction/>} />
+          <Route path="/Introduction-Page" element={<HomePage />} />
+          <Route path="/" element={<Introduction/>} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/create-post" element={<CreatePost />} />
