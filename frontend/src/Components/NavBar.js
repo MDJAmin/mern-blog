@@ -18,13 +18,9 @@ export default function NavBar() {
         <Link to="/">
           <img id="logo" src={logo} alt="logo"></img>
         </Link>
-        {isLoggedIn ? (
-          <Link to="/Introduction-Page" className="logo">
+        <Link to="/Introduction-Page" className="logo">
             MyBlog
           </Link>
-        ) : (
-          <></>
-        )}
       </div>
       <div className="login-register">
         {isLoggedIn ? (

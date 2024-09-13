@@ -21,9 +21,8 @@ app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use('/uploads', express.static(uploadsDir));  
 
 mongoose.connect(
-  "mongodb+srv://amin:HkvLRfibimGnPYha@cluster0.sd44t.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  "mongodb+srv://amin:kO8PSAYWF208U2v8@cluster0.trgyz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 );
-
 const JWT_SECRET = "gfjnhgmkhtdtuteutekjwry3563ghtyhqsbrw4y6juqw4ywgvkohgjornpe8igftv0kmguih46";
 
 const storage = multer.diskStorage({
